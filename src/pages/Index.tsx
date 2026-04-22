@@ -140,7 +140,7 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Books Section (Now Dynamic from Sanity) */}
+        {/* Books Section */}
         <section id="books" className="px-4 py-20 bg-purple-50 md:px-8 lg:py-32 rounded-[3rem] mx-2 md:mx-6 mb-6">
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 md:text-center">
@@ -164,7 +164,10 @@ export default function Index() {
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {books.map((book) => (
                   <div key={book._id} className="group relative flex flex-col bg-white rounded-[2.5rem] p-4 shadow-sm hover:shadow-xl transition-all border border-slate-100 hover:-translate-y-2">
-                    <div className={`relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] ${book.color || 'bg-slate-100'} mb-6`}>
+                    <div 
+                      className="relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] mb-6"
+                      style={{ backgroundColor: book.backgroundColor || '#F1F5F9' }}
+                    >
                       <img 
                         src={book.coverUrl || 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070'} 
                         alt={book.title} 
@@ -178,7 +181,13 @@ export default function Index() {
                       <p className="text-slate-600 font-medium leading-relaxed mb-6 flex-grow">
                         {book.description}
                       </p>
-                      <button className={`mt-auto w-full h-12 flex items-center justify-center rounded-2xl ${book.color || 'bg-slate-100'} ${book.textColor || 'text-slate-700'} font-bold transition-transform group-hover:scale-[1.02]`}>
+                      <button 
+                        className="mt-auto w-full h-12 flex items-center justify-center rounded-2xl font-bold transition-transform group-hover:scale-[1.02]"
+                        style={{ 
+                          backgroundColor: book.backgroundColor || '#F1F5F9',
+                          color: book.textColor || '#334155'
+                        }}
+                      >
                         Buy Now
                       </button>
                     </div>
