@@ -1,4 +1,4 @@
-import { useState, useEffect };
+import { useState, useEffect } from 'react';
 import { Menu, X, Sparkles } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 

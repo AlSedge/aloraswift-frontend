@@ -1,4 +1,4 @@
-import { useEffect, useState };
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Loader2 } from 'lucide-react';
 import { PortableText } from '@portabletext/react';

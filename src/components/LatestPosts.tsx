@@ -1,4 +1,4 @@
-import { useEffect, useState };
+import { useEffect, useState } from 'react';
 import { fetchSanityPosts, SanityPost } from '../lib/sanity';
 import { ArrowRight, Calendar, FileQuestion } from 'lucide-react';
 import { Link } from 'react-router-dom';
